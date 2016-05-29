@@ -2,7 +2,7 @@
 setwd("~/datascience/04 exploratory data analysis")
 
 ### load the data and subset the data of 2007-02-01 and 2007-02-02
-alldata <- read.table("household_power_consumption.txt", header = T, sep = ";")
+alldata <- read.table("household_power_consumption.txt", header = T, sep = ";", na.strings="?")
 data <- subset(alldata, Date =="1/2/2007" | Date == "2/2/2007")
 
 ### convert the class of some data to numeric
